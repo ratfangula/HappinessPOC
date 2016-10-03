@@ -1,0 +1,24 @@
+﻿@model IEnumerable<HappinessPOC.Models.HappyItem>
+@{
+    ViewBag.Title = "Index";
+}
+
+@section scripts {
+    <script src="~/Scripts/_custom/HappyItems.js"></script>
+    }
+
+<h2 class="h2">Index</h2>
+
+<ul class="list-group">
+    @foreach (var happyItem in Model.ToList())
+    {
+        <li class="row">
+            <span class="col-md-2 display itemname">@happyItem.Name</span>
+            <span class="col-md-2 edit itemname"><input type="text" style="display:block; width:100%" value="@happyItem.Name"/></span>
+            <span class="col-md-5 display itemdescription">@happyItem.Description</span>
+            <span class="col-md-5 edit itemdescription"><input type="text" style="display:block; width:100%"  value="@happyItem.Description" /></span>
+            <span class="col-md-2 display"><button class="btn btn-block editbutton">Edit</button></span>
+        </li>
+    }
+</ul>
+    

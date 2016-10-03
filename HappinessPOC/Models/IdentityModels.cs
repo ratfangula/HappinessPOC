@@ -29,5 +29,7 @@ namespace HappinessPOC.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<HappinessPOC.Models.HappyItem> HappyItems { get; set; }
     }
 }
